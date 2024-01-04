@@ -234,7 +234,7 @@ showAdAttribution: true,
 title: `Yuki Adisty V.2`,
 body:`SOURCE CODE`,
 previewType:"PHOTO",
-thumbnail: fs.readFileSync('./stik/reply.jpg'),
+thumbnail: await getBuffer(ppuser),
 sourceUrl:`https://youtube.com/watch?v=p0mr5L1a9b4&feature=share9`
 }
 }
@@ -282,7 +282,7 @@ showAdAttribution: false,
 title: `https://maulanabot.my.id`,
 body:`Runtime ${clockString(time)} `,
 previewType:"PHOTO",
-thumbnail: fs.readFileSync('./stik/reply.jpg')}
+thumbnail: await getBuffer(ppuser)}
 }
 
 if(replyType === "web"){
@@ -3901,7 +3901,7 @@ conn.relayMessage(from, { liveLocationMessage: {
 degreesLatitude: 35.676570,
 degreesLongitude: 139.762148,
 caption: respon,
-sequenceNumber: 1656662972682001, timeOffset: 8600, jpegThumbnail: fs.readFileSync('./stik/reply.jpg'),
+sequenceNumber: 1656662972682001, timeOffset: 8600, jpegthumbnail: await getBuffer(ppuser),
 contextInfo: {
 mentionedJid: [m.sender],
 externalAdReply: {
@@ -5484,7 +5484,7 @@ conn.sendMessage(from, { contextInfo: { externalAdReply: { showAdAttribution: tr
 title: `${baileysVersion}`,
 body:`Bot aktif ${runtime(process.uptime())}`,
 previewType:"PHOTO", 
-thumbnail: fs.readFileSync('./stik/reply.jpg'),
+thumbnail: await getBuffer(ppuser),
 sourceUrl:`https://youtube.com/watch?v=p0mr5L1a9b4&feature=share9`
 }}, image: get_result, caption: `*Nih Kamu jadi Kartun*`}, { quoted: m })
 fs.unlinkSync(ahah) 
@@ -6731,7 +6731,7 @@ conn.sendMessage(from, { contextInfo: { externalAdReply: { showAdAttribution: tr
 title: `${fake1}`,
 body:`Runtime ${clockString(time)} `,
 previewType:"PHOTO",
-thumbnail: fs.readFileSync('./stik/reply.jpg'),
+thumbnail: await getBuffer(ppuser),
 sourceUrl:`https://chat.whatsapp.com/JgJHpvM7K6UAYVlT2zQPFA`
 }}, video: vid, caption: "*Nih Tutornya🗿*", mimetype: 'video/mp4' },{quoted: m})
 
@@ -8361,7 +8361,7 @@ conn.sendMessage(from, { contextInfo: { externalAdReply: { showAdAttribution: tr
 title: `Halo👋, ${ucapanWaktu}${pushname}`,
 body: `${baileysVersion}`,
 previewType:"PHOTO",
-thumbnail: fs.readFileSync('./stik/reply.jpg'),
+thumbnail: await getBuffer(ppuser),
 sourceUrl:`${fakeUrl}`
 }}, image: get_result, caption: `*[ Done kak ]*`, buttons: but ,footer: `Hasil pencarian dari ${command}`}, { quoted: m })
 .catch((err) => setReply('Error coba lagi!'))
